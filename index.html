@@ -1,0 +1,121 @@
+<!-- <!DOCTYPE html>
+<html ng-app="signup">
+    <head>
+        <title>
+            Employee Signup Form
+        </title>
+        <script type="text/javascript" src="js/jquery-3.6.4.js"></script>
+         <script type="text/javascript" src="js/bootstrap.js"></script>
+          <script type="text/javascript" src="js/angular.js"></script>
+          <link rel="stylesheet" href="css/bootstrap.css">
+          <script type="text/javascript">
+            var app = angular.module("signup", []);
+app.controller("myctrl", function() {
+  $scope.submit = function() {
+    var data = $scope.employee;
+    $http.post('save.php', data).then(function(response) {
+      $scope.message = response.data;
+      $scope.employee = {};
+    }, function(error) {
+      console.log(error);
+    });
+  };
+});
+
+                      
+               
+          </script>
+    </head>
+    <body ng-controller="myctrl"> -->
+      <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Employee Signup Form</a>
+</nav>
+<div class="container">
+    <form class="form-horizontal" id="myform" ng-submit="submitForm()">
+        <fieldset>
+        
+          <div class="form-group">
+            <label for="exampleInputEmail1" class="form-label mt-4"><b>FirstName</b></label>
+            <input type="text" name="fname" class="form-control" id="fname" aria-describedby="emailHelp" placeholder="Enter firstname">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1" class="form-label mt-4"><b>LastName</b></label>
+            <input type="text" name="lname" class="form-control" id="lname" aria-describedby="emailHelp" placeholder="Enter lastname">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1" class="form-label mt-4"><b>Email</b></label>
+            <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1" class="form-label mt-4"><b>Password</b></label>
+            <input type="password" name="password" class="form-control" id="Password" placeholder=" enter Password">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1" class="form-label mt-4"><b>Contact no</b></label>
+            <input type="number" name="contact" class="form-control" id="contact" aria-describedby="emailHelp" placeholder="Enter contact number">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1" class="form-label mt-4"><b>Department</b></label>
+            <input type="text" name="department" class="form-control" id="department" aria-describedby="emailHelp" placeholder="Enter department">
+          </div>
+          <fieldset class="form-group">
+            <label class="mt-4"><b>Gender</b></label><br>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="gender" id="gender" value="Male" >
+              <label class="form-check-label" for="optionsRadios1">Male</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="gender" id="gender" value="Female" >
+              <label class="form-check-label" for="optionsRadios2">Female</label>
+            </div>
+        </fieldset>
+        
+          <div class="form-group">
+            <label for="exampleSelect1" class="form-label mt-4"><b>Nationality</b></label>
+            <select class="form-select" name="name" id="nationality">
+                  <option>Select</option>
+              <option>India</option>
+              <option>USA</option>
+              <option>Australia</option>
+              <option>Germany</option>
+              <option>Japan</option>
+            </select>
+          </div>
+        
+          <fieldset class="form-group">
+       <label class="mt-4"><b>Employee Status</b></label>
+      <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" name="permanentemp" id="permanentemp" >
+              <label class="form-check-label" for="flexCheckChecked">
+               Permanent Employee
+              </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" name="permanentemp" id="permanentemp" >
+                <label class="form-check-label" for="flexCheckChecked">
+                 Notice Period Employee
+                </label>
+              </div>
+        
+          </fieldset>
+          <br>
+          <span id="msg"></span>
+         <div class="form-group">
+            <div class="col-lg-10 col-lg-offset-2">
+                <button type="reset"  class="btn btn-primary">Reset</button>
+                <button type="submit" name="submit" id="submit" class="btn btn-primary">Submit</button>
+            </div>
+         </div>
+           
+        
+      
+       
+      </form>
+    </div>
+
+</div>
+</div>
+    <!-- </body>
+</html> -->
